@@ -138,15 +138,15 @@ export function configureRoutes(app: express.Application) {
   app.post(
     "/fashion-advice",
     async (req: Request, res: Response<IResponse>) => {
-      console.log(req.body);
+      //console.log(req.body);
       const { query } = req.body;
       try {
-        const advice = await getFashionAdvice(query);
+        const message = await getFashionAdvice(query);
 
         res.json({
           success: true,
-          message: `Returning advice for ${query}`,
-          data: advice,
+          message: `Fashion advice response for "${query}"`,
+          data: { message },
         });
       } catch (error) {
         console.log("Error fetching fashion advice:", error);

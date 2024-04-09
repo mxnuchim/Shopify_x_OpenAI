@@ -7,6 +7,10 @@ interface Product {
   images: string[];
 }
 
+interface CatalogChatItem {
+  name: string;
+}
+
 // interface Product {
 //   id: number;
 //   title: string;
@@ -48,4 +52,4 @@ interface IResponse {
   data?: any;
 }
 
-export { Product, Variant, Image, Option, IResponse };
+export { Product, Variant, Image, Option, CatalogChatItem, IResponse };
